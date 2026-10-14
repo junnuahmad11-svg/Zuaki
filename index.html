@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zuaki - Neon Template</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              display: ['Rajdhani', 'sans-serif'],
+            },
+            colors: {
+              cyber: {
+                bg: '#050818',
+                dark: '#02020a',
+                cyan: '#00f3ff',
+                pink: '#ff003c',
+                purple: '#9d00ff',
+                yellow: '#fcee0a',
+                slate: '#1e293b'
+              }
+            },
+            boxShadow: {
+              'neon-cyan': '0 0 5px #00f3ff, 0 0 10px rgba(0, 243, 255, 0.5)',
+              'neon-pink': '0 0 5px #ff003c, 0 0 10px rgba(255, 0, 60, 0.5)',
+              'neon-purple': '0 0 5px #9d00ff, 0 0 10px rgba(157, 0, 255, 0.5)',
+              'glass': '0 8px 32px 0 rgba(0, 0, 0, 0.37)'
+            },
+            animation: {
+              'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'glow': 'glow 2s ease-in-out infinite alternate',
+            },
+            keyframes: {
+              glow: {
+                '0%': { boxShadow: '0 0 5px #00f3ff' },
+                '100%': { boxShadow: '0 0 20px #00f3ff, 0 0 10px #00f3ff' }
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Custom scrollbar for the glass look */
+      ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: rgba(5, 8, 24, 0.5);
+      }
+      ::-webkit-scrollbar-thumb {
+        background: rgba(0, 243, 255, 0.3);
+        border-radius: 3px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: rgba(0, 243, 255, 0.6);
+        box-shadow: 0 0 10px rgba(0, 243, 255, 0.5);
+      }
+      body {
+        margin: 0;
+        overflow: hidden;
+        background-color: #050818;
+        color: #e2e8f0;
+        font-family: 'Rajdhani', sans-serif;
+      }
+      .glass-panel {
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      }
+      .neon-border-cyan {
+        border: 1px solid rgba(0, 243, 255, 0.3);
+        box-shadow: 0 0 15px rgba(0, 243, 255, 0.1), inset 0 0 15px rgba(0, 243, 255, 0.05);
+      }
+      .neon-border-pink {
+        border: 1px solid rgba(255, 0, 60, 0.3);
+        box-shadow: 0 0 15px rgba(255, 0, 60, 0.1), inset 0 0 15px rgba(255, 0, 60, 0.05);
+      }
+      @media print {
+        body {
+          overflow: visible !important;
+          background-color: #050818 !important;
+          color: #ffffff !important;
+          -webkit-print-color-adjust: exact !important;
+          print-color-adjust: exact !important;
+        }
+        nav, .no-print, header button, .custom-scrollbar::-webkit-scrollbar {
+          display: none !important;
+        }
+        @page {
+          size: A4 portrait;
+          margin: 10mm;
+        }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.556.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "react-dom": "https://aistudiocdn.com/react-dom@^19.2.1",
+    "react-dom/client": "https://aistudiocdn.com/react-dom@^19.2.1/client",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.31.0",
+    "recharts": "https://aistudiocdn.com/recharts@^3.5.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

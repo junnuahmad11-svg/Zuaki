@@ -1,0 +1,9 @@
+{
+  "name": "Zuaki",
+  "description": "A futuristic, glass-morphism style collaborative study platform featuring real-time chat, AI assistance, whiteboard collaboration, and analytics.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ],
+  "majorCapabilities": []
+}
